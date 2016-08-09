@@ -1,0 +1,32 @@
+<p>You buy shoo, yesh?</p>
+
+<form action="/shoo" method="post">
+  <p>
+    <label for="first_name">First name:</label>
+    <input type="text" name="first_name">
+    
+    <label for="last_name">Last name:</label>
+    <input type="text" name="last_name">
+  </p>
+
+  <p>
+    <label for="street_address">Street address:</label>
+    <input type="text" name="street_address">
+
+    <label for="town">Town:</label>
+    <input type="text" name="town">
+
+    <label for="postcode">Postcode:</label>
+    <input type="text" name="postcode">
+  </p>
+
+  <p>
+    <label for="quantity">Quantity of Shoos:</label>
+    <input type="number" name="quantity">
+
+    <label for="size">Shoo shize (6-11):</label>
+    <input type="number" name="size" min="6" max="11">
+  </p>
+
+  <input type="submit" value="Order Shoosh">
+</form>
