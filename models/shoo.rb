@@ -34,6 +34,24 @@ class Shoo
   end
 
   def save()
-    sql = "INSERT INTO"
+    sql = "INSERT INTO shoos (
+      first_name,
+      last_name,
+      street_address,
+      town,
+      postcode,
+      quantity,
+      size ) VALUES (
+      '#{ @first_name }',
+      '#{ @last_name }',
+      '#{ @street_address }',
+      '#{ @town }',
+      '#{ @postcode }',
+      #{ @quantity },
+      #{ @size } 
+      ) RETURNING *;"
+    shoo_data = SqlRunner.run( sql ).first
+    @id = shoo_data["id"].to_i
+  end
 
 end
