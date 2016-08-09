@@ -1,9 +1,8 @@
 <h1>Shoo Order Confirmation</h1>
 
-<
-
-<% @pizzas.each do |pizza| %>
-  <p><b>Name:</b> <%= pizza.pretty_name() %></p>
-  <p><b>Order:</b> <%= pizza.quantity %> x <%= pizza.topping %></p>
-  <hr>
+<% @shoos.each do |shoo| %>
+  <p><b>Name:</b> <%= shoo.format_name() %></p>
+  <p><b>Address:</b> <%= shoo.format_address() %></p>
+  <p><b>Order:</b> <%= shoo.quantity %> x size <%= shoo.size %></p>
+  <% break %>
 <% end %>

@@ -54,4 +54,11 @@ class Shoo
     @id = shoo_data["id"].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM shoos;"
+    shoo_data = SqlRunner.run( sql )
+    shoos = shoo_data.map { |shoo| Shoo.new(shoo) }
+    return shoos
+  end
+  
 end

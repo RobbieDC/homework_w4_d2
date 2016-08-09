@@ -13,7 +13,7 @@ post "/shoo" do
   erb( :create )
 end
 
-# get "/shoo" do
-#   @shoos = Shoos.all()
-#   erb( :index )
-# end
+get "/shoo" do
+  @shoos = Shoo.all()
+  erb( :index )
+end
